@@ -1,6 +1,3 @@
-[user]
-	email = fxue@roku.com
-	name = Feiyang Xue
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -27,3 +24,5 @@
 
 [difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
+[user]
+	name = Feiyang Xue
