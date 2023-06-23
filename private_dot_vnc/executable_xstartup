@@ -1,0 +1,10 @@
+#!/bin/sh
+
+export XKL_XMODMAP_DISABLE=1
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+
+vncconfig -nowin &
+autocutsel -fork
+xrdb $HOME/.Xresources_MidDPI
+i3 &
