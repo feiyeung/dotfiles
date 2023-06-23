@@ -11,9 +11,11 @@ export PS1="\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\\$ \[$(t
 alias reboot="echo 'use sudo for reboot'"
 alias poweroff="echo 'use sudo for poweroff'"
 
-eval "$(thefuck --alias)"
+if which thefuck 2>&1 >> /dev/null ; then
+	eval "$(thefuck --alias)"
+	alias f="fuck"
+fi
 
-alias f="fuck"
 alias g="git"
 alias gl="git log"
 alias gl1="git log --oneline"
@@ -27,4 +29,4 @@ alias grep-cwd-parallel='find . -type f -print0 | xargs -0 -P 32 -n 50 grep --co
 # export XDG_CURRENT_DESKTOP=GNOME
 
 
-. "$HOME/.cargo/env"
+[ ! -f "$HOME/.cargo/env" ] || . "$HOME/.cargo/env"
