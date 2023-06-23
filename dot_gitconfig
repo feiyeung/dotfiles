@@ -1,0 +1,29 @@
+[user]
+	email = fxue@roku.com
+	name = Feiyang Xue
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[diff]
+	tool = bc3
+[merge]
+	tool = bc3
+[init]
+	defaultBranch = main
+[submodule]
+	fetchJobs = 10
+	fetchJobs = 16
+[difftool "vscode"]
+        cmd = code --wait --diff --new-window $LOCAL $REMOTE
+[mergetool "vscode"]
+        cmd = code --wait --new-window $MERGED
+[push]
+	autoSetupRemote = true
+
+[mergetool "vscode"]s
+    cmd = code --wait $MERGED
+
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
