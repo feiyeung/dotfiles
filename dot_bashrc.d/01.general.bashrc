@@ -28,5 +28,7 @@ alias grep-cwd-parallel='find . -type f -print0 | xargs -0 -P 32 -n 50 grep --co
 
 # export XDG_CURRENT_DESKTOP=GNOME
 
-
 [ ! -f "$HOME/.cargo/env" ] || . "$HOME/.cargo/env"
+
+export CCACHE_DIR=~/.ccache
+export CCACHE_MAXSIZE=20G
