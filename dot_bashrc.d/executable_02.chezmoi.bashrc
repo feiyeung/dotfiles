@@ -13,4 +13,5 @@ else
 fi
 
 $chezmoi completion bash --output="$script"
+chmod +x "$script"
 source "$script"
